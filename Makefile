@@ -7,7 +7,7 @@ include config.mk
 SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 
-all: options st
+all: ${HOME}/bin/st
 
 options:
 	@echo st build options:
@@ -25,7 +25,10 @@ $(OBJ): config.h config.mk
 
 st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
-	cp $@ ${HOME}/bin/
+
+${HOME}/bin/st: st
+	rm -f $@
+	ln -s ${CURDIR}/$(@F) $@
 
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz
