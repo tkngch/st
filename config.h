@@ -170,6 +170,9 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
+
+    /* Shift+Insert to paste from the primary X selection. */
+    {ShiftMask, XK_Insert, selpaste, {.i = 0}},
 };
 
 /*
