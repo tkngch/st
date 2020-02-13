@@ -111,50 +111,65 @@ unsigned int tabspaces = 4;
 //   [257] = "#a4a6ab", /* foreground */
 //   [258] = "#add8e6", /* cursor */
 // };
+
+
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+//   // eighties.dark from https://terminal.sexy/
 //
-// /*
-//  * Default colors (colorname index)
-//  * foreground, background, cursor, reverse cursor
-//  */
-// unsigned int defaultfg = 257;
-// unsigned int defaultbg = 256;
-// static unsigned int defaultcs = 258;
-// static unsigned int defaultrcs = 0;
-// /*
-//  * Colors used, when the specific fg == defaultfg. So in reverse mode this
-//  * will reverse too. Another logic would only make the simple feature too
-//  * complex.
-//  */
-// unsigned int defaultitalic = 7;
-// unsigned int defaultunderline = 7;
+//   /* 8 normal colors */
+//   [0] = "#2d2d2d", /* black   */
+//   [1] = "#f2777a", /* red     */
+//   [2] = "#99cc99", /* green   */
+//   [3] = "#ffcc66", /* yellow  */
+//   [4] = "#6699cc", /* blue    */
+//   [5] = "#cc99cc", /* magenta */
+//   [6] = "#66cccc", /* cyan    */
+//   [7] = "#d3d0c8", /* white   */
+//
+//   /* 8 bright colors */
+//   [8]  = "#747369", /* black   */
+//   [9]  = "#f2777a", /* red     */
+//   [10] = "#99cc99", /* green   */
+//   [11] = "#ffcc66", /* yellow  */
+//   [12] = "#6699cc", /* blue    */
+//   [13] = "#cc99cc", /* magenta */
+//   [14] = "#66cccc", /* cyan    */
+//   [15] = "#f2f0ec", /* white   */
+//
+//   /* special colors */
+//   [256] = "#2d2d2d", /* background */
+//   [257] = "#d3d0c8", /* foreground */
+// };
+
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  // eighties.dark from https://terminal.sexy/
+  // embers.light from https://terminal.sexy/
 
   /* 8 normal colors */
-  [0] = "#2d2d2d", /* black   */
-  [1] = "#f2777a", /* red     */
-  [2] = "#99cc99", /* green   */
-  [3] = "#ffcc66", /* yellow  */
-  [4] = "#6699cc", /* blue    */
-  [5] = "#cc99cc", /* magenta */
-  [6] = "#66cccc", /* cyan    */
-  [7] = "#d3d0c8", /* white   */
+  [0] = "#16130f", /* black   */
+  [1] = "#826d57", /* red     */
+  [2] = "#57826d", /* green   */
+  [3] = "#6d8257", /* yellow  */
+  [4] = "#6d5782", /* blue    */
+  [5] = "#82576d", /* magenta */
+  [6] = "#576d82", /* cyan    */
+  [7] = "#a39a90", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#747369", /* black   */
-  [9]  = "#f2777a", /* red     */
-  [10] = "#99cc99", /* green   */
-  [11] = "#ffcc66", /* yellow  */
-  [12] = "#6699cc", /* blue    */
-  [13] = "#cc99cc", /* magenta */
-  [14] = "#66cccc", /* cyan    */
-  [15] = "#f2f0ec", /* white   */
+  [8]  = "#5a5047", /* black   */
+  [9]  = "#826d57", /* red     */
+  [10] = "#57826d", /* green   */
+  [11] = "#6d8257", /* yellow  */
+  [12] = "#6d5782", /* blue    */
+  [13] = "#82576d", /* magenta */
+  [14] = "#576d82", /* cyan    */
+  [15] = "#dbd6d1", /* white   */
 
   /* special colors */
-  [256] = "#2d2d2d", /* background */
-  [257] = "#d3d0c8", /* foreground */
+  [256] = "#dbd6d1", /* background */
+  [257] = "#433b32", /* foreground */
 };
 
 /*
@@ -173,6 +188,7 @@ static unsigned int defaultrcs = 0;
  */
 static unsigned int defaultitalic = 7;
 static unsigned int defaultunderline = 7;
+
 
 /*
  * Default shape of cursor
