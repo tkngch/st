@@ -83,49 +83,96 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 4;
 
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+//   // Ivory Dark from https://terminal.sexy/
+//   /* 8 normal colors */
+//   [0] = "#5b5955", /* black   */
+//   [1] = "#c4756e", /* red     */
+//   [2] = "#559a6a", /* green   */
+//   [3] = "#9b8a4b", /* yellow  */
+//   [4] = "#6a8dca", /* blue    */
+//   [5] = "#b577ac", /* magenta */
+//   [6] = "#019baa", /* cyan    */
+//   [7] = "#dbdde2", /* white   */
+//
+//   /* 8 bright colors */
+//   [8]  = "#707277", /* black   */
+//   [9]  = "#f6a299", /* red     */
+//   [10] = "#82c896", /* green   */
+//   [11] = "#cab775", /* yellow  */
+//   [12] = "#98bbfb", /* blue    */
+//   [13] = "#e5a4db", /* magenta */
+//   [14] = "#53cad9", /* cyan    */
+//   [15] = "#f7f9ff", /* white   */
+//
+//   /* special colors */
+//   [256] = "#2d2c28", /* background */
+//   [257] = "#a4a6ab", /* foreground */
+//   [258] = "#add8e6", /* cursor */
+// };
+//
+// /*
+//  * Default colors (colorname index)
+//  * foreground, background, cursor, reverse cursor
+//  */
+// unsigned int defaultfg = 257;
+// unsigned int defaultbg = 256;
+// static unsigned int defaultcs = 258;
+// static unsigned int defaultrcs = 0;
+// /*
+//  * Colors used, when the specific fg == defaultfg. So in reverse mode this
+//  * will reverse too. Another logic would only make the simple feature too
+//  * complex.
+//  */
+// unsigned int defaultitalic = 7;
+// unsigned int defaultunderline = 7;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  // Ivory Dark from https://terminal.sexy/
+  // eighties.dark from https://terminal.sexy/
+
   /* 8 normal colors */
-  [0] = "#5b5955", /* black   */
-  [1] = "#c4756e", /* red     */
-  [2] = "#559a6a", /* green   */
-  [3] = "#9b8a4b", /* yellow  */
-  [4] = "#6a8dca", /* blue    */
-  [5] = "#b577ac", /* magenta */
-  [6] = "#019baa", /* cyan    */
-  [7] = "#dbdde2", /* white   */
+  [0] = "#2d2d2d", /* black   */
+  [1] = "#f2777a", /* red     */
+  [2] = "#99cc99", /* green   */
+  [3] = "#ffcc66", /* yellow  */
+  [4] = "#6699cc", /* blue    */
+  [5] = "#cc99cc", /* magenta */
+  [6] = "#66cccc", /* cyan    */
+  [7] = "#d3d0c8", /* white   */
 
   /* 8 bright colors */
-  [8]  = "#707277", /* black   */
-  [9]  = "#f6a299", /* red     */
-  [10] = "#82c896", /* green   */
-  [11] = "#cab775", /* yellow  */
-  [12] = "#98bbfb", /* blue    */
-  [13] = "#e5a4db", /* magenta */
-  [14] = "#53cad9", /* cyan    */
-  [15] = "#f7f9ff", /* white   */
+  [8]  = "#747369", /* black   */
+  [9]  = "#f2777a", /* red     */
+  [10] = "#99cc99", /* green   */
+  [11] = "#ffcc66", /* yellow  */
+  [12] = "#6699cc", /* blue    */
+  [13] = "#cc99cc", /* magenta */
+  [14] = "#66cccc", /* cyan    */
+  [15] = "#f2f0ec", /* white   */
 
   /* special colors */
-  [256] = "#2d2c28", /* background */
-  [257] = "#a4a6ab", /* foreground */
+  [256] = "#2d2d2d", /* background */
+  [257] = "#d3d0c8", /* foreground */
 };
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultrcs = 0;
+
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-unsigned int defaultitalic = 7;
-unsigned int defaultunderline = 7;
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
